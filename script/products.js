@@ -126,8 +126,113 @@ const displayCategories = (categories) => {
          ${category}
         </button>
     `;
+    
     categoryContainer.append(btnDiv);
   }
+};
+
+let cart = [];
+
+const openCart = () => {
+  renderCart();
+  document.getElementById("cart_modal").showModal();
+};
+
+const renderCart = () => {
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item) => {
+    total += item.price * item.quantity;
+
+    const div = document.createElement("div");
+    div.className = "flex justify-between items-center border p-3 rounded";
+
+    div.innerHTML = `
+      <div class="flex items-center gap-3">
+        <img src="${item.image}" class="w-14 h-14 object-contain" />
+        <div>
+          <h4 class="font-semibold text-sm">${item.title}</h4>
+          <p class="text-sm">$${item.price}</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button
+          class="btn btn-xs"
+          onclick="updateQty(${item.id}, -1)">−</button>
+
+        <span class="px-2">${item.quantity}</span>
+
+        <button
+          class="btn btn-xs"
+          onclick="updateQty(${item.id}, 1)">+</button>
+
+        <button
+          class="btn btn-xs btn-error"
+          onclick="removeFromCart(${item.id})">
+          ✕
+        </button>
+      </div>
+    `;
+
+    cartItems.appendChild(div);
+  });
+
+  cartTotal.textContent = total.toFixed(2);
+};
+
+const updateQty = (id, change) => {
+  const item = cart.find((p) => p.id === id);
+  if (!item) return;
+
+  item.quantity += change;
+
+  if (item.quantity <= 0) {
+    cart = cart.filter((p) => p.id !== id);
+  }
+
+  updateCartCount();
+  renderCart();
+};
+
+const removeFromCart = (id) => {
+  cart = cart.filter((item) => item.id !== id);
+  updateCartCount();
+  renderCart();
+};
+
+const updateCartCount = () => {
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const badge = document.getElementById("cart-count");
+
+  if (count > 0) {
+    badge.textContent = count;
+    badge.classList.remove("hidden");
+  } else {
+    badge.classList.add("hidden");
+  }
+};
+
+const addToCartById = async (id) => {
+  const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const product = await res.json();
+  addToCart(product);
+};
+
+const addToCart = (product) => {
+  const existing = cart.find((item) => item.id === product.id);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  updateCartCount();
 };
 
 //fakestoreapi.com/products/category/${category}
