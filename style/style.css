@@ -5,3 +5,8 @@
 .capital {
   text-transform: capitalize;
 }
+
+.active {
+  background-color: #433ad5;
+  color: white;
+}

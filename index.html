@@ -34,33 +34,33 @@
 
 <body class="bg-base-100">
     <!-- Navbar -->
-    <div class="navbar max-w-6xl mx-auto bg-base-100 shadow">
-       
+    <div class="navbar max-w-6xl mx-auto bg-base-100">
+        <!-- Left: Logo -->
         <div class="navbar-start">
-            <a class="text-xl md:text-2xl font-bold text-primary">
+            <a href="#" class="text-xl md:text-2xl font-bold text-primary">
                 SwiftCart
             </a>
         </div>
 
-       
+        <!-- Center: Desktop Menu -->
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 gap-6">
                 <li><a class="font-medium text-primary">Home</a></li>
-                <li><a class="font-medium">Products</a></li>
+                <li><a href="products.html" class="font-medium">Products</a></li>
                 <li><a class="font-medium">About</a></li>
                 <li><a class="font-medium">Contact</a></li>
             </ul>
         </div>
 
-       
+
         <div class="navbar-end gap-2">
 
-            
+            <!-- Cart -->
             <button class="btn btn-ghost btn-circle">
                 <i class="fa-solid fa-cart-shopping"></i>
             </button>
 
-            
+            <!-- Mobile Menu -->
             <div class="dropdown dropdown-end lg:hidden">
                 <label tabindex="0" class="btn btn-ghost">
                     <i class="fa-solid fa-bars text-lg"></i>
@@ -77,11 +77,12 @@
     </div>
 
     <!-- banner -->
-    <section class="hero min-h-[600px] bg-cover bg-center" style="background-image: url('assets/banner-image.png');">
+    <section class="hero min-h-[600px] max-w-svw bg-cover bg-center"
+        style="background-image: url('assets/banner-image.png');">
         <div class="hero-overlay" style="background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0));"></div>
-        <div class="hero-content text-left text-neutral-content w-6xl">
+        <div class="hero-content text-left text-neutral-content lg:w-6xl">
             <div class="w-full">
-                <h1 class="mb-5 text-5xl font-bold text-white">
+                <h1 class="mb-5 lg:text-5xl text-2xl font-bold text-white">
                     Best Collection For You
                 </h1>
                 <p class="mb-5 max-w-xl">
@@ -95,8 +96,6 @@
         </div>
     </section>
 
-
-<!-- Why Choose Us -->
     <section class="py-16 bg-base-200">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-2">Why Choose Us</h2>
@@ -122,7 +121,9 @@
 
                 <div class="card bg-base-100 shadow">
                     <span class="indicator-center badge">
-                        <i class="fa-solid fa-headset text-primary text-3xl mb-2"></i>
+                        <span class="bg-blue-100 rounded-lg p-2 border border-white shadow-md border-4">
+                            <i class="fa-solid fa-headset text-primary text-3xl mb-2"></i>
+                        </span>
                     </span>
                     <div class="card-body items-left text-left">
 
@@ -135,7 +136,9 @@
 
                 <div class="card bg-base-100 shadow">
                     <span class="indicator-center badge">
-                        <i class="fa-solid fa-shield-halved text-primary text-3xl mb-2"></i>
+                        <span class="bg-blue-100 rounded-lg p-2 border border-white shadow-md border-4">
+                            <i class="fa-solid fa-shield-halved text-primary text-3xl mb-2"></i>
+                        </span>
                     </span>
                     <div class="card-body items-left text-left">
                         <h3 class="font-semibold">Secure Payment</h3>
@@ -147,7 +150,9 @@
 
                 <div class="card bg-base-100 shadow">
                     <span class="indicator-center badge">
-                        <i class="fa-solid fa-rotate-left text-primary text-3xl mb-2"></i>
+                        <span class="bg-blue-100 rounded-lg p-2 border border-white shadow-md border-4">
+                            <i class="fa-solid fa-rotate-left text-primary text-3xl mb-2"></i>
+                        </span>
                     </span>
                     <div class="card-body items-left text-left">
                         <h3 class="font-semibold">Easy Returns</h3>
@@ -165,10 +170,10 @@
             <h2 class="text-3xl font-bold mb-8">Trending Now</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
                 <div class="card bg-base-100 shadow">
                     <figure>
-                        <img src="assets/p-1.jpg" alt="T-Shirt" />
+                        <img class="h-32" src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png"
+                            alt="T-Shirt" />
                     </figure>
                     <div class="card-body">
                         <div class="flex justify-between items-center">
@@ -176,73 +181,76 @@
                                 Men's Clothing
                             </span>
                             <span class="text-sm text-warning">
-                                ★ 4.1 (259)
-                            </span>
-                        </div>
-                        <h3 class="font-semibold">
-                            Mens Casual Premium Slim Fit T-Shirts
-                        </h3>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold">$22.30</span>
-                        </div>
-                        <div class="card-actions justify-between">
-                            <button class="btn btn-outline btn-sm">
-                                <i class="fa-solid fa-eye mr-1"></i> Details</button>
-                            <button class="btn btn-primary btn-sm">
-                                <i class="fa-solid fa-cart-plus mr-1"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="card bg-base-100 shadow">
-                    <figure>
-                        <img src="assets/p-1.jpg" alt="T-Shirt" />
-                    </figure>
-                    <div class="card-body">
-                        <div class="flex justify-between items-center">
-                            <span class="badge badge-primary badge-outline w-fit">
-                                Men's Clothing
-                            </span>
-                            <span class="text-sm text-warning">
-                                ★ 4.1 (259)
-                            </span>
-                        </div>
-                        <h3 class="font-semibold">
-                            Mens Casual Premium Slim Fit T-Shirts
-                        </h3>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold">$22.30</span>
-                        </div>
-                        <div class="card-actions justify-between">
-                            <button class="btn btn-outline btn-sm">
-                                <i class="fa-solid fa-eye mr-1"></i> Details</button>
-                            <button class="btn btn-primary btn-sm">
-                                <i class="fa-solid fa-cart-plus mr-1"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card bg-base-100 shadow">
-                    <figure>
-                        <img src="assets/p-1.jpg" alt="Jacket" />
-                    </figure>
-                    <div class="card-body">
-                        <div class="flex justify-between items-center">
-                            <span class="badge badge-primary badge-outline w-fit">
-                                Men's Clothing
-                            </span>
-                            <span class="text-sm text-warning">
                                 ★ 4.7 (500)
                             </span>
                         </div>
-                        <h3 class="font-semibold">Mens Cotton Jacket</h3>
+                        <h3 class="font-semibold truncate text-left">
+                            Mens Cotton Jacket
+                        </h3>
                         <div class="flex justify-between items-center">
                             <span class="font-bold">$55.99</span>
+                        </div>
+                        <div class="card-actions justify-between">
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-eye mr-1"></i> Details</button>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-cart-plus mr-1"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="card bg-base-100 shadow">
+                    <figure>
+                        <img class="h-32" src="https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png"
+                            alt="T-Shirt" />
+                    </figure>
+                    <div class="card-body">
+                        <div class="flex justify-between items-center">
+                            <span class="badge badge-primary badge-outline w-fit">
+                                Electronics
+                            </span>
+                            <span class="text-sm text-warning">
+                                ★ 4.8 (400)
+                            </span>
+                        </div>
+                        <h3 class="font-semibold truncate text-left">
+                            WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">$114</span>
+                        </div>
+                        <div class="card-actions justify-between">
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fa-solid fa-eye mr-1"></i> Details</button>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-cart-plus mr-1"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow">
+                    <figure>
+                        <img class="h-32" src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png"
+                            alt="Jacket" />
+                    </figure>
+                    <div class="card-body">
+                        <div class="flex justify-between items-center">
+                            <span class="badge badge-primary badge-outline w-fit">
+                                Jewelery
+                            </span>
+                            <span class="text-sm text-warning">
+                                ★ 1.9 (100)
+                            </span>
+                        </div>
+                        <h3 class="font-semibold truncate text-left">
+                            Pierced Owl Rose Gold Plated Stainless Steel Double
+                        </h3>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">
+                                $10.99
+                            </span>
                         </div>
                         <div class="card-actions justify-between">
                             <button class="btn btn-outline btn-sm">
@@ -257,10 +265,10 @@
         </div>
     </section>
 
-    <footer class="bg-neutral text-neutral-content">
+    <footer class="bg-neutral text-neutral-content text-gray-400">
         <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
-                <h3 class="text-xl font-bold mb-2">SwiftCart</h3>
+                <h3 class="text-2xl font-bold mb-2 text-primary">SwiftCart</h3>
                 <p class="text-sm">
                     Your one-stop shop for quality products, fast delivery, and excellent
                     support.
@@ -289,8 +297,9 @@
 
             <div>
                 <h4 class="font-semibold mb-2">Newsletter</h4>
-                <div class="join">
-                    <input type="email" placeholder="Enter your email" class="input input-bordered join-item" />
+                <div class="join flex-col lg:flex-row gap-2 lg:gap-0 w-full">
+                    <input type="email" placeholder="Enter your email"
+                        class="input input-bordered join-item text-gray-700 w-full" />
                     <button class="btn btn-primary join-item">
                         Subscribe
                     </button>
@@ -298,10 +307,25 @@
             </div>
         </div>
 
-        <div class="text-center text-sm py-4 border-t border-gray-700">
-            © 2025 SwiftCart, Inc. All rights reserved.
+        <div
+            class="flex lg:justify-between lg:items-center item-start flex-col-reverse lg:flex-row border-t border-gray-700 max-w-6xl mx-auto  text-left  whitespace-nowra pt-6">
+
+            <span class="lg:text-center text-left text-sm py-4  ">
+                © 2026 SwiftCart, Inc. All rights reserved.
+            </span>
+            <span class="text-warning ">
+                <ul class="flex lg:justify-between items-start lg:items-center gap-4 text-gray-400 ">
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></i></a></li>
+                    <li><a href=""><i class="fa-regular fa-envelope-open"></i></a></li>
+                </ul>
+            </span>
         </div>
+
     </footer>
+    <script src="script/products.js"></script>
 
 </body>
 
