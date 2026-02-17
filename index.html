@@ -33,7 +33,51 @@
 </head>
 
 <body class="bg-base-100">
- 
+    <!-- Navbar -->
+    <div class="navbar max-w-6xl mx-auto bg-base-100 shadow">
+       
+        <div class="navbar-start">
+            <a class="text-xl md:text-2xl font-bold text-primary">
+                SwiftCart
+            </a>
+        </div>
+
+       
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 gap-6">
+                <li><a class="font-medium text-primary">Home</a></li>
+                <li><a class="font-medium">Products</a></li>
+                <li><a class="font-medium">About</a></li>
+                <li><a class="font-medium">Contact</a></li>
+            </ul>
+        </div>
+
+       
+        <div class="navbar-end gap-2">
+
+            
+            <button class="btn btn-ghost btn-circle">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+
+            
+            <div class="dropdown dropdown-end lg:hidden">
+                <label tabindex="0" class="btn btn-ghost">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </label>
+                <ul tabindex="0" class="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Home</a></li>
+                    <li><a>Products</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+   
+
 </body>
 
 </html>
