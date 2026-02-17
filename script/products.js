@@ -126,7 +126,7 @@ const displayCategories = (categories) => {
          ${category}
         </button>
     `;
-    
+    //console.log(btnDiv);
     categoryContainer.append(btnDiv);
   }
 };
